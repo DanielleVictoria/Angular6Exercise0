@@ -1,0 +1,30 @@
+<div class = 'add'>
+    
+    <table>
+        <tr>
+            <td>Title</td>
+            <td><input type='text'
+                (keydown.enter) = 'createItem(title.value,status.value,notes.value)'
+                 #title></td>
+        </tr>
+
+        <tr>
+            <td>Notes</td>
+            <td>
+                <textarea rows="2" cols="116" #notes>
+                </textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Status</td>
+            <td>
+                <select #status>
+                    <option value="Ongoing">Ongoing</option>
+                    <option value="Accomplished">Accomplished</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button (click) ='createItem(title.value,status.value,notes.value)'>Add</button>
+</div>

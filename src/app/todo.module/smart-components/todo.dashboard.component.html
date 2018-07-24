@@ -1,0 +1,24 @@
+<div>
+    <todo-count 
+        [items]='items'
+        [countAccomplished] = 'countAccomplished'>
+    </todo-count>
+</div>
+
+<div *ngIf='items'>
+    <todo-add
+        [lastId]='items[items.length-1] ? items[items.length-1].id : 0'
+        (add)='handleAdd($event)'>
+    </todo-add>
+</div>
+
+<div *ngFor='let item of items'>
+    <todo-details 
+        [item]='item'
+        (remove)='handleRemove($event)'
+        (accomplish)='handleAccomplish($event)'>
+    </todo-details>
+</div>  
+  
+
+

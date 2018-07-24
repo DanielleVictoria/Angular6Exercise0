@@ -1,0 +1,16 @@
+.count {
+    background-color: rgb(206, 61, 133);
+    text-align: center;
+    height: 100px;
+}
+
+.main {
+    width: 100%;
+    height : 100px;
+    text-align: center;
+}
+
+* {
+    color : #f8f8f8;
+    font-size: xx-large;
+}
